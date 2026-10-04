@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gethired-international.com/sitemap.xml
