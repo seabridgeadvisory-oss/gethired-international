@@ -14,8 +14,8 @@
 <meta property="og:description" content="Career coaching for expats and internationals job hunting in the Netherlands: Dutch CVs, applications, interview preparation, and offer negotiation.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://gethired-international.com/">
-<meta property="og:image" content="https://gethired-international.com/og-image.jpg">
+<meta property="og:url" content="https://www.gethired-international.com/">
+<meta property="og:image" content="https://www.gethired-international.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Get Hired International: career coaching for expats and internationals in the Netherlands">
@@ -23,9 +23,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Career Coach for Expats &amp; Internationals in the Netherlands">
 <meta name="twitter:description" content="Dutch CVs, applications, interview preparation, and offer negotiation, from someone who has hired and been hired here.">
-<meta name="twitter:image" content="https://gethired-international.com/og-image.jpg">
+<meta name="twitter:image" content="https://www.gethired-international.com/og-image.jpg">
 
-<link rel="canonical" href="https://gethired-international.com/">
+<link rel="canonical" href="https://www.gethired-international.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%232C6A58'/%3E%3Cpath d='M13 30 V13 H27 V30' fill='none' stroke='%23FBF8F3' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 13 L23 17 V27 L13 30 Z' fill='%23FBF8F3'/%3E%3Ccircle cx='19.5' cy='22' r='1.6' fill='%232C6A58'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,32 +37,32 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://gethired-international.com/#website",
-      "url": "https://gethired-international.com/",
+      "@id": "https://www.gethired-international.com/#website",
+      "url": "https://www.gethired-international.com/",
       "name": "Get Hired International",
       "inLanguage": "en",
-      "publisher": { "@id": "https://gethired-international.com/#business" }
+      "publisher": { "@id": "https://www.gethired-international.com/#business" }
     },
     {
       "@type": "Person",
-      "@id": "https://gethired-international.com/#caio",
+      "@id": "https://www.gethired-international.com/#caio",
       "name": "Caio Garrido",
       "jobTitle": "Career Coach",
-      "url": "https://gethired-international.com/",
+      "url": "https://www.gethired-international.com/",
       "sameAs": ["https://www.linkedin.com/in/caio-garrido/"]
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://gethired-international.com/#business",
+      "@id": "https://www.gethired-international.com/#business",
       "name": "Get Hired International",
       "description": "Career coaching for expats and internationals job hunting in the Netherlands: Dutch CVs, applications, interview preparation, and offer negotiation.",
-      "url": "https://gethired-international.com/",
-      "image": "https://gethired-international.com/og-image.jpg",
+      "url": "https://www.gethired-international.com/",
+      "image": "https://www.gethired-international.com/og-image.jpg",
       "email": "seabridge.advisory@gmail.com",
       "serviceType": "Career coaching",
       "areaServed": { "@type": "Country", "name": "Netherlands" },
-      "founder": { "@id": "https://gethired-international.com/#caio" },
-      "employee": { "@id": "https://gethired-international.com/#caio" },
+      "founder": { "@id": "https://www.gethired-international.com/#caio" },
+      "employee": { "@id": "https://www.gethired-international.com/#caio" },
       "knowsAbout": [
         "Dutch job market",
         "CV writing for the Netherlands",
@@ -787,6 +787,29 @@
     .rv, .rv.in { opacity: 1; transform: none; transition: none; }
     *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   }
+
+  /* ---------- compact homepage previews ---------- */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--rule); border-block: 1px solid var(--rule); }
+  @media (min-width: 760px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+  .steps li { background: var(--paper); padding: 1.35rem 1.25rem 1.5rem; display: grid; gap: .55rem; align-content: start; }
+  .band--alt .steps li { background: var(--paper-alt); }
+  .steps-num { font-family: var(--display); font-size: .8rem; letter-spacing: .14em; color: var(--accent); }
+  .steps h3 { font-family: var(--display); font-weight: 400; font-size: 1.12rem; line-height: 1.25; }
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .55rem; }
+  .chips a { display: inline-block; padding: .55rem .9rem; border: 1px solid var(--rule); border-radius: 999px;
+             font-size: .92rem; color: var(--ink); text-decoration: none; background: var(--paper); transition: border-color .18s, background .18s; }
+  .band--alt .chips a { background: var(--paper-alt); }
+  .chips a:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .more { margin-top: clamp(1.6rem, 3vw, 2.4rem); }
+
+  /* ---------- illustrative figures on inner pages ---------- */
+  .fig { margin: .35rem 0 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); background: var(--paper-alt); }
+  .fig img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .fig--band img { aspect-ratio: 3 / 1; }
+  .page-head { max-width: var(--measure); display: grid; gap: .9rem; }
+  .crumb { font-size: .86rem; color: var(--muted); }
+  .crumb a { color: var(--muted); }
+  .crumb a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -806,7 +829,8 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <a href="#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
       <a href="#about">About</a>
       <a href="#insights">Insights</a>
       <a href="#contact">Contact</a>
@@ -820,7 +844,8 @@
   </div>
 
   <nav class="drawer" id="drawer" hidden aria-label="Menu">
-    <a href="#how-i-help">How I Help</a>
+    <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
     <a href="#about">About</a>
     <a href="#insights">Insights</a>
     <a href="#contact">Contact</a>
@@ -840,7 +865,7 @@
           <p class="hero-sub">You may already be qualified. What changes the outcome is understanding how the Dutch market reads that experience, and what the person across the table is actually looking for.</p>
           <div class="cta-row">
             <a class="btn" href="#contact">Book a free 20-minute call</a>
-            <a class="btn btn--ghost" href="#how-i-help">See how we work</a>
+            <a class="btn btn--ghost" href="/career-journey/">See how we work</a>
           </div>
           <p class="cta-note">A free 20-minute call to learn about your story and how we can partner together. No preparation needed.</p>
         </div>
@@ -876,6 +901,7 @@
   </section>
 
   <!-- ============ 3. THE CAREER JOURNEY ============ -->
+  <!-- ============ 3. CAREER JOURNEY (summary; full page at /career-journey/) ============ -->
   <section class="band" id="how-i-help">
     <div class="shell">
       <div class="section-head rv">
@@ -884,101 +910,30 @@
         <p class="lede">Each stage asks something different of you. We work through them in order, or start wherever you are right now.</p>
       </div>
 
-      <div class="journey">
-
-        <article class="stage rv">
-          <div class="stage-num">01</div>
-          <div class="stage-lead">
+      <ol class="steps rv">
+          <li>
+            <span class="steps-num">01</span>
             <h3>Where to start?</h3>
-            <p>The first question is: how do I search for jobs, and how do I build a compelling application?</p>
-          </div>
-          <dl class="stage-detail">
-            <div>
-              <dt>What gets in the way</dt>
-              <dd>It seems obvious, but using the wrong job search channel or resume template can cut your chances to zero from the beginning.</dd>
-            </div>
-            <div>
-              <dt>What needs to change</dt>
-              <dd>Every market has its own standard way of working. Following best practices is what determines whether you start on the right foot.</dd>
-            </div>
-            <div>
-              <dt>How we work on it</dt>
-              <dd>We set the search up properly: the right channels for your field, and a resume built to local convention rather than the one that worked back home.</dd>
-            </div>
-          </dl>
-        </article>
-
-        <article class="stage rv">
-          <div class="stage-num">02</div>
-          <div class="stage-lead">
+          </li>
+          <li>
+            <span class="steps-num">02</span>
             <h3>Getting your application seen among hundreds</h3>
-            <p>You send hundreds of applications and hear nothing back. This is much more common than you'd think.</p>
-          </div>
-          <dl class="stage-detail">
-            <div>
-              <dt>What gets in the way</dt>
-              <dd>Volume was never the constraint. A generic application competes with hundreds of near-identical ones and gives a busy reader nothing to hold on to.</dd>
-            </div>
-            <div>
-              <dt>What needs to change</dt>
-              <dd>We need to address the core problem the role is meant to solve. Understanding the organization's pain point, and building your application around it, is what it takes to catch a recruiter's attention.</dd>
-            </div>
-            <div>
-              <dt>How we work on it</dt>
-              <dd>We read the vacancy properly, work out what breaks if the role stays empty, and rebuild your application as the answer to that. Don't let the silence get you down.</dd>
-            </div>
-          </dl>
-        </article>
-
-        <article class="stage rv">
-          <div class="stage-num">03</div>
-          <div class="stage-lead">
+          </li>
+          <li>
+            <span class="steps-num">03</span>
             <h3>My first interview! How do I get ready?</h3>
-            <p>Receiving an email titled "Invitation for the 1st interview" is thrilling. This is just the start of a journey that can take up to seven steps.</p>
-          </div>
-          <dl class="stage-detail">
-            <div>
-              <dt>What gets in the way</dt>
-              <dd>Preparation is crucial, and more than ever we need to talk through the role, the company, the people, and expectations.</dd>
-            </div>
-            <div>
-              <dt>What needs to change</dt>
-              <dd>AI is an excellent tool for this kind of preparation, but in the end, a real person from the company will interview you.</dd>
-            </div>
-            <div>
-              <dt>How we work on it</dt>
-              <dd>We work through every step together: desk research, case studies, storytelling, rehearsing, and confidence. Whatever format they throw at you, we'll get you ready and sharp for it.</dd>
-            </div>
-          </dl>
-        </article>
-
-        <article class="stage rv">
-          <div class="stage-num">04</div>
-          <div class="stage-lead">
+          </li>
+          <li>
+            <span class="steps-num">04</span>
             <h3>I got an offer! Now what?</h3>
-            <p>How great it feels, after months of job searching, endless processes, and setbacks, to finally get a job offer.</p>
-          </div>
-          <dl class="stage-detail">
-            <div>
-              <dt>What gets in the way</dt>
-              <dd>Watch out, and keep your emotions in check when negotiating, because you may leave a lot on the table.</dd>
-            </div>
-            <div>
-              <dt>What needs to change</dt>
-              <dd>Every person has a different skill set, and every company assesses it differently, so negotiating well isn't just important; it's a must.</dd>
-            </div>
-            <div>
-              <dt>How we work on it</dt>
-              <dd>Salary bands, hiring bonuses, the <a href="https://business.gov.nl/staff/employing-staff/the-expat-scheme-30-percent-ruling-in-the-netherlands/" target="_blank" rel="noopener noreferrer">30% ruling</a>: we look into all of it, based on your role, your market, and your timeline.</dd>
-            </div>
-          </dl>
-        </article>
+          </li>
+      </ol>
 
-      </div>
+      <p class="more rv"><a class="btn btn--ghost" href="/career-journey/">Read the full journey</a></p>
     </div>
   </section>
 
-  <!-- ============ 4. SERVICES ============ -->
+  <!-- ============ 4. WHAT WE CAN WORK ON (summary; full page at /how-i-help/) ============ -->
   <section class="band band--alt" id="services">
     <div class="shell">
       <div class="section-head rv">
@@ -987,43 +942,17 @@
         <p class="lede">We start wherever the obstacle actually is. Most people need two or three of these, not all seven.</p>
       </div>
 
-      <div class="services rv">
-        <div class="service">
-          <span class="service-idx">01</span>
-          <h3>Career strategy &amp; job search</h3>
-          <p>Where to look, which channels are worth your time in your field, and how to structure a search that doesn't burn you out.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">02</span>
-          <h3>CV / resume positioning</h3>
-          <p>Rebuilding your CV around what a Dutch recruiter is actually scanning for, including the work authorization line most people forget.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">03</span>
-          <h3>Applications &amp; storytelling</h3>
-          <p>Framing your experience around the problem the role exists to solve, so the match is obvious in the first thirty seconds.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">04</span>
-          <h3>Interview preparation</h3>
-          <p>Research on the company and the people you'll meet, mock rounds, and answers that hold up when the follow-up question comes.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">05</span>
-          <h3>Case study preparation</h3>
-          <p>The business cases and assessments that show up in later rounds, worked through until the format stops being a surprise.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">06</span>
-          <h3>Offer &amp; salary negotiation</h3>
-          <p>Working out what the role should realistically pay, and how to have that conversation without leaving money on the table.</p>
-        </div>
-        <div class="service">
-          <span class="service-idx">07</span>
-          <h3>Dutch job market navigation</h3>
-          <p>How hiring actually works here: what signals matter, who decides, and where internationals get filtered out without being told why.</p>
-        </div>
-      </div>
+      <ul class="chips rv">
+          <li><a href="/how-i-help/#svc-01">Career strategy &amp; job search</a></li>
+          <li><a href="/how-i-help/#svc-02">CV / resume positioning</a></li>
+          <li><a href="/how-i-help/#svc-03">Applications &amp; storytelling</a></li>
+          <li><a href="/how-i-help/#svc-04">Interview preparation</a></li>
+          <li><a href="/how-i-help/#svc-05">Case study preparation</a></li>
+          <li><a href="/how-i-help/#svc-06">Offer &amp; salary negotiation</a></li>
+          <li><a href="/how-i-help/#svc-07">Dutch job market navigation</a></li>
+      </ul>
+
+      <p class="more rv"><a class="btn btn--ghost" href="/how-i-help/">See how each one works</a></p>
     </div>
   </section>
 
@@ -1240,7 +1169,8 @@
       Get Hired International
     </span>
     <nav class="foot-links" aria-label="Footer">
-      <a href="#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
       <a href="#about">About</a>
       <a href="#insights">Insights</a>
       <a href="#contact">Contact</a>

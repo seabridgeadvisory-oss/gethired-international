@@ -8,15 +8,27 @@ Live: https://gethired-international.com
 ## Structure
 
 ```
-index.html                     Homepage (single scrolling page)
+index.html                     Homepage (short; links out to the two pages below)
+career-journey/index.html      The four stages, in full
+how-i-help/index.html          The seven things we can work on, in full
 og-image.jpg                   Social share card (1200×630)
 robots.txt                     Crawl directives
-sitemap.xml                    5 URLs, submitted to Google Search Console
+sitemap.xml                    7 URLs, submitted to Google Search Console
 images/                        Photography
 articles/<slug>/index.html     One page per article
 ```
 
 Static HTML. No build step, no dependencies, no framework.
+
+The homepage carries a short summary of the career journey and the service
+list; the full text of each lives on its own page. Keep it that way. Those two
+sections were 694 words on the homepage, just over half the page, and on a
+phone that was eight screens of scrolling before a visitor reached the About
+section. If a summary starts growing back, move the detail to the page instead.
+
+Each page repeats the whole stylesheet inline. That is deliberate for a site
+this size — one request per page, nothing to cache-bust — but it does mean a
+design-token change has to be applied to all seven files.
 
 ## Deploying
 

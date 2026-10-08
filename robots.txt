@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gethired-international.com/sitemap.xml
+Sitemap: https://www.gethired-international.com/sitemap.xml
