@@ -115,6 +115,18 @@
   .doc-body{padding-top:clamp(1.75rem,4vw,2.5rem)}
   .doc-body p{margin-bottom:1.3rem;color:#39434B}
   .doc-body p:last-child{margin-bottom:0}
+  .doc-body h2{font-family:var(--display);font-weight:400;font-size:clamp(1.42rem,1.2rem+.75vw,1.9rem);
+    line-height:1.22;margin:2.5rem 0 .9rem;color:var(--ink);text-wrap:balance}
+  .doc-body h3{font-family:var(--display);font-weight:500;font-size:1.1rem;margin:1.7rem 0 .45rem;color:var(--ink)}
+  .doc-body ul{margin:0 0 1.3rem;padding-left:1.15rem;color:#39434B}
+  .doc-body li{margin-bottom:.55rem;line-height:1.65}
+  .doc-body strong{color:var(--ink);font-weight:600}
+  .eg{border-left:2px solid var(--accent);background:var(--paper-alt);padding:1.05rem 1.25rem;
+    margin:0 0 1.4rem;border-radius:0 8px 8px 0}
+  .eg p{margin-bottom:.65rem;font-size:.95rem}
+  .eg p:last-child{margin-bottom:0}
+  .eg-k{font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:block;margin-bottom:.5rem}
   .doc-body p:first-child::first-letter{
     font-family:var(--display);font-size:3.3em;line-height:.82;float:left;
     padding:.08em .09em 0 0;color:var(--accent);font-weight:400}
@@ -162,17 +174,35 @@
       </svg>
       <span><b>Get Hired</b> <i>International</i></span>
     </a>
+
     <nav class="nav" aria-label="Primary">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
     </nav>
+
     <a class="btn nav-cta" href="/#contact">Book a free call</a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <nav class="drawer" id="drawer" hidden aria-label="Menu">
+    <a href="/career-journey/">Career Journey</a>
+    <a href="/how-i-help/">How I Help</a>
+    <a href="/how-we-work/">How We Work</a>
+    <a href="/#about">About</a>
+    <a href="/#insights">Insights</a>
+    <a href="/#contact">Contact</a>
+    <a class="btn" href="/#contact">Book a free 20-minute call</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <article class="doc">
     <div class="doc-shell">
       <a class="crumb" href="/#insights">&larr; All insights</a>
@@ -181,10 +211,53 @@
       <p class="stand">The CV that worked back home is quietly working against you here. Three changes fix most of it.</p>
 
       <div class="doc-body">
+
         <p>Most internationals show up with a CV that served them perfectly well at home, and that&rsquo;s exactly the problem. A Dutch recruiter is scanning for different signals, in a different length, in a different tone, and none of that has anything to do with how good you actually are at your job.</p>
-        <p>Start with length. If you were taught a CV must fit one page, let that go. Two pages is standard here, and cramming a decade of work into one page reads as thin, not sharp.</p>
-        <p>Then tone it down, literally. Dutch business writing is understated, almost blunt. Calling yourself a results-driven visionary won&rsquo;t read as confident, it&rsquo;ll read as noise a busy recruiter skims straight past. Say what you did, what changed because of it, and let the numbers do the persuading.</p>
-        <p>The line most people forget is the one that quietly kills the most applications: work authorization. A recruiter looking at a foreign name and a foreign address won&rsquo;t spend a call finding out whether hiring you means a permit process, they&rsquo;ll just move on. If you qualify for the <a href="https://ind.nl/en/residence-permits/work/highly-skilled-migrant" target="_blank" rel="noopener noreferrer">highly skilled migrant scheme</a>, say so near the top. It&rsquo;s often the difference between a callback and silence.</p>
+
+        <h2>Two pages, not one</h2>
+        <p>If you were taught a CV must fit one page, let that go. Two pages is standard here, and cramming a decade of work into one page reads as thin, not sharp. The one-page rule comes from markets where recruiters screen enormous volumes of near-identical graduate applications. That is not what is happening when a Dutch hiring manager opens your file.</p>
+        <p>Use the space for what it is actually for: the last three roles in real detail, earlier roles compressed to a line or two each, and nothing padded to fill a gap. A second page that is half empty is worse than a tight single page, so let the content decide.</p>
+
+        <h2>Say what changed, not what you were responsible for</h2>
+        <p>Dutch business writing is understated, almost blunt. Calling yourself a results-driven visionary won&rsquo;t read as confident, it&rsquo;ll read as noise a busy recruiter skims straight past. Say what you did, what changed because of it, and let the numbers do the persuading.</p>
+        <p>The pattern that works is unglamorous: <strong>what you did &rarr; what changed &rarr; how you know</strong>. Most CVs stop at the first part.</p>
+        <div class="eg">
+          <span class="eg-k">Example</span>
+          <p><strong>Before:</strong> &ldquo;Responsible for managing the regional logistics budget and a team of eight, driving operational excellence across the network.&rdquo;</p>
+          <p><strong>After:</strong> &ldquo;Led eight people across regional logistics. Consolidated three carrier contracts into one, which took roughly 12% out of outbound freight cost over 18 months.&rdquo;</p>
+          <p>Same job. The second version tells a reader what you would do for them, and gives them something to ask about in an interview.</p>
+        </div>
+        <p>If you genuinely don&rsquo;t have a number, say what changed in plain language instead: a process that stopped breaking, a backlog that cleared, an audit that passed. Inventing a percentage is worse than not having one, because the first competent interviewer will ask how you measured it.</p>
+
+        <h2>The line most people forget</h2>
+        <p>The line that quietly kills the most applications is work authorization. A recruiter looking at a foreign name and a foreign address won&rsquo;t spend a call finding out whether hiring you means a permit process, they&rsquo;ll just move on. If you qualify for the <a href="https://ind.nl/en/residence-permits/work/highly-skilled-migrant" target="_blank" rel="noopener noreferrer">highly skilled migrant scheme</a>, say so near the top. It&rsquo;s often the difference between a callback and silence.</p>
+        <div class="eg">
+          <span class="eg-k">Example</span>
+          <p>If you already have the right to work: &ldquo;Dutch work authorization: EU national, no permit or sponsorship required.&rdquo;</p>
+          <p>If you would need sponsorship: &ldquo;Eligible for the highly skilled migrant scheme; relocating to the Netherlands from March.&rdquo;</p>
+          <p>One line, in your header block, next to your location. You are answering the question before it becomes a reason to stop reading.</p>
+        </div>
+
+        <h2>The conventions nobody mentions</h2>
+        <p>A few things differ from what you may be used to, and they are easy to get right once you know:</p>
+        <ul>
+          <li><strong>Personal details are normal here.</strong> Name, city, phone, email, LinkedIn. Date of birth and nationality are commonly included and are not the taboo they are in the US or UK. Include them or don&rsquo;t, but their presence will not count against you.</li>
+          <li><strong>A photo is optional and common.</strong> If you use one, use a plain, well-lit, professional photo. A holiday crop will do more harm than no photo at all.</li>
+          <li><strong>Open with a short profile.</strong> Three or four lines saying who you are professionally and what you are looking for. Not adjectives &mdash; specifics.</li>
+          <li><strong>Skip &ldquo;references available on request.&rdquo;</strong> It takes a line and tells the reader nothing. They will ask when they want them.</li>
+          <li><strong>Languages matter, so be precise.</strong> List them with honest levels, ideally on the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale" target="_blank" rel="noopener noreferrer">CEFR scale</a>. &ldquo;Dutch (A2, learning)&rdquo; is respected. &ldquo;Dutch (basic)&rdquo; is ambiguous, and ambiguity gets read pessimistically.</li>
+          <li><strong>Keep the layout plain.</strong> One column, standard headings, no text boxes or tables. Beyond looking calmer, it survives the software that may read it before a person does.</li>
+        </ul>
+
+        <h2>Before you send it</h2>
+        <ul>
+          <li>Can a stranger tell, in ten seconds, what you do and what level you work at?</li>
+          <li>Is your work authorization status visible without scrolling?</li>
+          <li>Does every bullet say what changed, not just what you oversaw?</li>
+          <li>Have you cut every word that would sound inflated read aloud in a quiet room?</li>
+          <li>Is the file named something a recruiter can find later &mdash; <em>Surname-Firstname-CV.pdf</em>, not <em>CV-final-v3.pdf</em>?</li>
+        </ul>
+
         <p>None of this is about pretending to be someone you&rsquo;re not. It&rsquo;s about being read correctly by someone with 30 seconds and a stack of a hundred CVs. For a longer walkthrough of formatting conventions, <a href="https://www.thehagueinternationalcentre.nl/how-to-write-a-cv-in-the-netherlands" target="_blank" rel="noopener noreferrer">The Hague International Centre&rsquo;s guide</a> is a solid start, though the version tailored to your actual story is the one that gets you hired.</p>
       </div>
 
@@ -225,7 +298,9 @@
       Get Hired International
     </span>
     <nav class="foot-links" aria-label="Footer">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
@@ -235,5 +310,30 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var drawer = document.getElementById('drawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      var open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      drawer.hidden = open;
+    });
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+        burger.focus();
+      }
+    });
+  })();
+</script>
 </body>
 </html>
