@@ -11,9 +11,10 @@ Live: https://gethired-international.com
 index.html                     Homepage (short; links out to the two pages below)
 career-journey/index.html      The four stages, in full
 how-i-help/index.html          The seven things we can work on, in full
+how-we-work/index.html         The five stages of working together
 og-image.jpg                   Social share card (1200×630)
 robots.txt                     Crawl directives
-sitemap.xml                    7 URLs, submitted to Google Search Console
+sitemap.xml                    8 URLs, submitted to Google Search Console
 images/                        Photography
 articles/<slug>/index.html     One page per article
 ```
@@ -28,7 +29,7 @@ section. If a summary starts growing back, move the detail to the page instead.
 
 Each page repeats the whole stylesheet inline. That is deliberate for a site
 this size — one request per page, nothing to cache-bust — but it does mean a
-design-token change has to be applied to all seven files.
+design-token change has to be applied to all eight files.
 
 ## Deploying
 
