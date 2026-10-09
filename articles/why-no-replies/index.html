@@ -115,6 +115,18 @@
   .doc-body{padding-top:clamp(1.75rem,4vw,2.5rem)}
   .doc-body p{margin-bottom:1.3rem;color:#39434B}
   .doc-body p:last-child{margin-bottom:0}
+  .doc-body h2{font-family:var(--display);font-weight:400;font-size:clamp(1.42rem,1.2rem+.75vw,1.9rem);
+    line-height:1.22;margin:2.5rem 0 .9rem;color:var(--ink);text-wrap:balance}
+  .doc-body h3{font-family:var(--display);font-weight:500;font-size:1.1rem;margin:1.7rem 0 .45rem;color:var(--ink)}
+  .doc-body ul{margin:0 0 1.3rem;padding-left:1.15rem;color:#39434B}
+  .doc-body li{margin-bottom:.55rem;line-height:1.65}
+  .doc-body strong{color:var(--ink);font-weight:600}
+  .eg{border-left:2px solid var(--accent);background:var(--paper-alt);padding:1.05rem 1.25rem;
+    margin:0 0 1.4rem;border-radius:0 8px 8px 0}
+  .eg p{margin-bottom:.65rem;font-size:.95rem}
+  .eg p:last-child{margin-bottom:0}
+  .eg-k{font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:block;margin-bottom:.5rem}
   .doc-body p:first-child::first-letter{
     font-family:var(--display);font-size:3.3em;line-height:.82;float:left;
     padding:.08em .09em 0 0;color:var(--accent);font-weight:400}
@@ -162,17 +174,35 @@
       </svg>
       <span><b>Get Hired</b> <i>International</i></span>
     </a>
+
     <nav class="nav" aria-label="Primary">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
     </nav>
+
     <a class="btn nav-cta" href="/#contact">Book a free call</a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <nav class="drawer" id="drawer" hidden aria-label="Menu">
+    <a href="/career-journey/">Career Journey</a>
+    <a href="/how-i-help/">How I Help</a>
+    <a href="/how-we-work/">How We Work</a>
+    <a href="/#about">About</a>
+    <a href="/#insights">Insights</a>
+    <a href="/#contact">Contact</a>
+    <a class="btn" href="/#contact">Book a free 20-minute call</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <article class="doc">
     <div class="doc-shell">
       <a class="crumb" href="/#insights">&larr; All insights</a>
@@ -181,11 +211,55 @@
       <p class="stand">Sending more will not fix it. The channel, the framing, and one silent filter usually will.</p>
 
       <div class="doc-body">
+
         <p>When nothing comes back, the instinct is to send more. It almost never works, because volume was never the constraint.</p>
+
+        <h2>A vacancy is a problem statement</h2>
         <p>A vacancy exists because something is broken: a team is behind, someone left, a market needs opening. The requirements list is just a rough attempt to describe who could fix that. Read it a second time and ask what breaks if the role stays empty for six months, then build your application around being the answer, not around ticking bullet points.</p>
+        <div class="eg">
+          <span class="eg-k">Example</span>
+          <p><strong>The vacancy says:</strong> &ldquo;5+ years in supply chain. Experience with S&amp;OP. Strong stakeholder management. Fluent English.&rdquo;</p>
+          <p><strong>What it probably means:</strong> their forecasting and their production planning disagree with each other, nobody owns the meeting where that gets resolved, and the last person who tried could not get commercial and operations in the same room.</p>
+          <p><strong>So the opening line becomes:</strong> &ldquo;I have run S&amp;OP cycles in two businesses where commercial and operations were working from different numbers. In both cases the fix was less about the forecast model and more about who sat in the room.&rdquo;</p>
+          <p>That is the same experience either way. One version matches bullets; the other answers the question the hiring manager actually has.</p>
+        </div>
+        <p>You can usually find the real problem without inside information. Look at how long the role has been open, whether it has been reposted, whether the team is hiring two of them, and what the company announced in the last six months.</p>
+
+        <h2>Your first reader has 30 seconds</h2>
         <p>Your first reader has about 30 seconds and often isn&rsquo;t an expert in your field. They&rsquo;re matching your CV against a vacancy, not evaluating your career, so anything that requires guessing what you mean is a risk you can&rsquo;t afford. Lead with what you changed, not what you were responsible for.</p>
+        <p>Two practical consequences. First, your job titles may need translating &mdash; if your title was <em>Specialist II</em> and the market calls it <em>Procurement Manager</em>, a line of clarification stops a screener filing you at the wrong level. Second, the first third of page one does almost all the work. Everything you most want read belongs there.</p>
+
+        <h2>The channel beats the rewrite</h2>
         <p>Here&rsquo;s the part most people miss entirely: the channel matters more than another rewrite. A cold application through a job portal is competing with hundreds of near-identical submissions. The same application sent through a referral, or through a recruiter who works your niche, is a completely different conversation, and it&rsquo;s not a coincidence that <a href="https://www.linkedin.com/business/talent/blog/product-tips/employee-referrals-and-linkedin-recruiter-top-sources-of-hire" target="_blank" rel="noopener noreferrer">referrals consistently outperform job board applications</a>. Specialist recruiters for internationals, like <a href="https://undutchables.nl/" target="_blank" rel="noopener noreferrer">Undutchables</a>, exist for exactly this reason.</p>
-        <p>And if a company runs your CV through software before a human ever sees it, you&rsquo;re not imagining that either. <a href="https://en.wikipedia.org/wiki/Applicant_tracking_system" target="_blank" rel="noopener noreferrer">Applicant tracking systems</a> are standard practice, which is one more reason a generic CV sent to 200 postings underperforms 20 CVs built for 20 specific roles.</p>
+        <p>&ldquo;Get a referral&rdquo; is easy advice and vague help, so here is the version that actually works when you don&rsquo;t know anyone yet:</p>
+        <ul>
+          <li>Find two or three people doing your job at the company, not the recruiter and not the hiring manager.</li>
+          <li>Ask them about the work, not for a job. A short, specific question about how the team is set up gets answered far more often than a request for help.</li>
+          <li>Mention that you are applying, once, after they reply. Many Dutch companies pay a referral bonus, so an internal nudge costs them nothing and may earn them something.</li>
+          <li>Give it a week before the application, not an hour.</li>
+        </ul>
+        <p>This is slower per role. That is the point: it only works because you are doing it for a handful of roles rather than two hundred.</p>
+
+        <h2>The silent filter</h2>
+        <p>And if a company runs your CV through software before a human ever sees it, you&rsquo;re not imagining that either. <a href="https://en.wikipedia.org/wiki/Applicant_tracking_system" target="_blank" rel="noopener noreferrer">Applicant tracking systems</a> are standard practice. You cannot game them reliably, and anyone selling you a trick is overstating it, but you can avoid being filtered for reasons that have nothing to do with your suitability:</p>
+        <ul>
+          <li>Use the job title the vacancy uses, somewhere in your CV, if it is honestly true of you.</li>
+          <li>Keep the layout to one column. Tables, text boxes and sidebars can be read out of order or dropped.</li>
+          <li>Put nothing important in a header or footer; those are frequently skipped entirely.</li>
+          <li>Use ordinary section names &mdash; Experience, Education, Skills. Clever headings confuse the parser and save you nothing.</li>
+          <li>Send a text-based PDF, not a scan or an image. If you can&rsquo;t select the text in your own file, neither can the software.</li>
+        </ul>
+
+        <h2>If you reset this week</h2>
+        <p>The honest version of a reset is smaller than most people expect:</p>
+        <ul>
+          <li>Stop applying for a few days. Nothing is being lost; the current approach is returning nothing.</li>
+          <li>Pick twenty roles you would genuinely take, not two hundred you could do.</li>
+          <li>For five of them, find the real problem behind the vacancy and rewrite your opening lines around it.</li>
+          <li>For those same five, find one human being at each company before you submit.</li>
+          <li>Track what you sent and what came back. Without a record, you cannot tell which change worked.</li>
+        </ul>
+
         <p>Silence isn&rsquo;t a verdict on you. It&rsquo;s usually a matching failure, and matching failures are fixable.</p>
       </div>
 
@@ -226,7 +300,9 @@
       Get Hired International
     </span>
     <nav class="foot-links" aria-label="Footer">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
@@ -236,5 +312,30 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var drawer = document.getElementById('drawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      var open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      drawer.hidden = open;
+    });
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+        burger.focus();
+      }
+    });
+  })();
+</script>
 </body>
 </html>
