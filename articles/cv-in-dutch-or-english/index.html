@@ -115,6 +115,18 @@
   .doc-body{padding-top:clamp(1.75rem,4vw,2.5rem)}
   .doc-body p{margin-bottom:1.3rem;color:#39434B}
   .doc-body p:last-child{margin-bottom:0}
+  .doc-body h2{font-family:var(--display);font-weight:400;font-size:clamp(1.42rem,1.2rem+.75vw,1.9rem);
+    line-height:1.22;margin:2.5rem 0 .9rem;color:var(--ink);text-wrap:balance}
+  .doc-body h3{font-family:var(--display);font-weight:500;font-size:1.1rem;margin:1.7rem 0 .45rem;color:var(--ink)}
+  .doc-body ul{margin:0 0 1.3rem;padding-left:1.15rem;color:#39434B}
+  .doc-body li{margin-bottom:.55rem;line-height:1.65}
+  .doc-body strong{color:var(--ink);font-weight:600}
+  .eg{border-left:2px solid var(--accent);background:var(--paper-alt);padding:1.05rem 1.25rem;
+    margin:0 0 1.4rem;border-radius:0 8px 8px 0}
+  .eg p{margin-bottom:.65rem;font-size:.95rem}
+  .eg p:last-child{margin-bottom:0}
+  .eg-k{font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:block;margin-bottom:.5rem}
   .doc-body p:first-child::first-letter{
     font-family:var(--display);font-size:3.3em;line-height:.82;float:left;
     padding:.08em .09em 0 0;color:var(--accent);font-weight:400}
@@ -162,17 +174,35 @@
       </svg>
       <span><b>Get Hired</b> <i>International</i></span>
     </a>
+
     <nav class="nav" aria-label="Primary">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
     </nav>
+
     <a class="btn nav-cta" href="/#contact">Book a free call</a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <nav class="drawer" id="drawer" hidden aria-label="Menu">
+    <a href="/career-journey/">Career Journey</a>
+    <a href="/how-i-help/">How I Help</a>
+    <a href="/how-we-work/">How We Work</a>
+    <a href="/#about">About</a>
+    <a href="/#insights">Insights</a>
+    <a href="/#contact">Contact</a>
+    <a class="btn" href="/#contact">Book a free 20-minute call</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <article class="doc">
     <div class="doc-shell">
       <a class="crumb" href="/#insights">&larr; All insights</a>
@@ -181,11 +211,45 @@
       <p class="stand">Not every employer expects Dutch. When they do, small language mistakes give away more than you&rsquo;d think.</p>
 
       <div class="doc-body">
+
         <p>Not every Dutch employer expects a Dutch CV. International corporates, most tech companies, and any vacancy that explicitly lists English as the working language are usually fine with an English CV, and forcing a Dutch version there adds risk without adding anything. The question is who&rsquo;s reading it, not politeness.</p>
-        <p>Dutch SMEs, public sector roles, and anything client-facing on a Dutch-speaking team are a different story. There, a Dutch CV is often the unspoken expectation, and skipping it can read as a mismatch before anyone&rsquo;s assessed your experience. If the vacancy itself is written in Dutch, that&rsquo;s usually your answer.</p>
+
+        <h2>Let the vacancy answer the question</h2>
+        <p>Before agonising over it, look at the evidence in front of you. The language of the posting is the single most reliable signal you have.</p>
+        <ul>
+          <li><strong>Vacancy written in English</strong> &mdash; apply in English. Sending Dutch here can even read as a misunderstanding of the team you would be joining.</li>
+          <li><strong>Vacancy written in Dutch</strong> &mdash; that is your answer. Applying in English is possible, but you are asking the reader to make an allowance for you on the first impression.</li>
+          <li><strong>Vacancy in Dutch, but the company is visibly international</strong> &mdash; check the careers page and the team&rsquo;s LinkedIn. If half the team posts in English, an English CV with a short Dutch cover note is a reasonable middle path.</li>
+          <li><strong>Role is client-facing in a Dutch-speaking market</strong> &mdash; the language is part of the job, and your CV is the first evidence either way.</li>
+        </ul>
+        <p>Dutch SMEs, public sector roles, and anything client-facing on a Dutch-speaking team are a different story from the international corporates. There, a Dutch CV is often the unspoken expectation, and skipping it can read as a mismatch before anyone&rsquo;s assessed your experience.</p>
+
+        <h2>The honest B2 test</h2>
         <p>If you&rsquo;re genuinely comfortable writing in Dutch, B2 or higher, write it yourself and have someone fluent review it. If you&rsquo;re not there yet, a machine-translated CV is often worse than an honest English one: a native reader catches stiff, word-for-word phrasing in seconds, and it undercuts the very language skills you&rsquo;re trying to show.</p>
-        <p>Watch the register too. Everyday Dutch is casual, first names and &ldquo;je&rdquo; within a sentence of meeting someone, but a CV and its cover letter stay in the formal &ldquo;u,&rdquo; consistently. Switching between the two, even by accident, reads as a translation done in a hurry.</p>
-        <p>Skip the direct translations that don&rsquo;t survive the trip. &ldquo;Responsible for&rdquo; and &ldquo;results-driven&rdquo; already sound a little inflated in English; translated literally into Dutch, a language that leans understated in business writing, they land even further off. Say what you changed, in plain terms, the same advice that applies in English applies here too.</p>
+        <p>A useful test before you commit: could you handle a fifteen-minute phone screen in Dutch, unprepared? If the honest answer is no, a flawless Dutch CV sets up a conversation you cannot carry, and that gap is more damaging than applying in English would have been.</p>
+
+        <h2>Register: &ldquo;u&rdquo; and &ldquo;je&rdquo;</h2>
+        <p>Everyday Dutch is casual, first names and &ldquo;je&rdquo; within a sentence of meeting someone, but a CV and its cover letter stay in the formal &ldquo;u,&rdquo; consistently. Switching between the two, even by accident, reads as a translation done in a hurry.</p>
+        <div class="eg">
+          <span class="eg-k">Example</span>
+          <p><strong>Mixed, and it shows:</strong> &ldquo;Graag stel ik mij aan <em>u</em> voor &hellip; Ik hoor graag van <em>je</em>.&rdquo;</p>
+          <p><strong>Consistent:</strong> &ldquo;Graag stel ik mij aan <em>u</em> voor &hellip; Ik hoor graag van <em>u</em>.&rdquo;</p>
+          <p>Pick one register at the top of the letter and hold it to the last line, including the sign-off.</p>
+        </div>
+
+        <h2>Phrases that don&rsquo;t survive the trip</h2>
+        <p>&ldquo;Responsible for&rdquo; and &ldquo;results-driven&rdquo; already sound a little inflated in English; translated literally into Dutch, a language that leans understated in business writing, they land even further off.</p>
+        <ul>
+          <li>&ldquo;Results-driven professional&rdquo; &rarr; translated word for word this reads as filler. Drop it and state the result instead.</li>
+          <li>&ldquo;Responsible for a team of 10&rdquo; &rarr; <em>&ldquo;Gaf leiding aan een team van 10&rdquo;</em> &mdash; a verb, not a status.</li>
+          <li>&ldquo;Spearheaded&rdquo;, &ldquo;championed&rdquo;, &ldquo;owned the vision for&rdquo; &rarr; there is no natural Dutch equivalent that does not sound slightly absurd. Say what you started, led, or built.</li>
+          <li>&ldquo;Dear Sir/Madam&rdquo; &rarr; <em>&ldquo;Geachte heer/mevrouw&rdquo;</em> is correct, but a name is better. Dutch hiring teams are small and usually findable.</li>
+        </ul>
+        <p>Say what you changed, in plain terms. The same advice that applies in English applies here too, only the tolerance for inflation is lower.</p>
+
+        <h2>The middle path</h2>
+        <p>If you are somewhere between the two, you do not have to choose all or nothing. An English CV with a short, carefully checked Dutch cover note shows the effort and the direction of travel without pretending to fluency you do not have. Adding a single honest line &mdash; <em>Nederlands: B1, actief aan het leren</em> &mdash; does more for you than a full Dutch CV that someone else wrote.</p>
+
         <p>For the mechanics and formatting conventions, <a href="https://www.expatica.com/nl/working/finding-a-job/dutch-cv-interview-tips-102340/" target="_blank" rel="noopener noreferrer">Expatica&rsquo;s guide to Dutch CVs</a> is a solid reference, and <a href="https://www.makeitinthenorth.nl/all-content-for-jobseekers/how-to-find-a-job-in-the-netherlands/how-to-write-a-cv-full-guide/" target="_blank" rel="noopener noreferrer">Make It in the North&rsquo;s CV guide</a> covers conventions specific to the Dutch market. Neither replaces a native speaker&rsquo;s eye on your own draft, but both are a solid start.</p>
       </div>
 
@@ -226,7 +290,9 @@
       Get Hired International
     </span>
     <nav class="foot-links" aria-label="Footer">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
@@ -236,5 +302,30 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var drawer = document.getElementById('drawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      var open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      drawer.hidden = open;
+    });
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+        burger.focus();
+      }
+    });
+  })();
+</script>
 </body>
 </html>
