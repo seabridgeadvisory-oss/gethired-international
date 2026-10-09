@@ -115,6 +115,18 @@
   .doc-body{padding-top:clamp(1.75rem,4vw,2.5rem)}
   .doc-body p{margin-bottom:1.3rem;color:#39434B}
   .doc-body p:last-child{margin-bottom:0}
+  .doc-body h2{font-family:var(--display);font-weight:400;font-size:clamp(1.42rem,1.2rem+.75vw,1.9rem);
+    line-height:1.22;margin:2.5rem 0 .9rem;color:var(--ink);text-wrap:balance}
+  .doc-body h3{font-family:var(--display);font-weight:500;font-size:1.1rem;margin:1.7rem 0 .45rem;color:var(--ink)}
+  .doc-body ul{margin:0 0 1.3rem;padding-left:1.15rem;color:#39434B}
+  .doc-body li{margin-bottom:.55rem;line-height:1.65}
+  .doc-body strong{color:var(--ink);font-weight:600}
+  .eg{border-left:2px solid var(--accent);background:var(--paper-alt);padding:1.05rem 1.25rem;
+    margin:0 0 1.4rem;border-radius:0 8px 8px 0}
+  .eg p{margin-bottom:.65rem;font-size:.95rem}
+  .eg p:last-child{margin-bottom:0}
+  .eg-k{font-family:var(--body);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:block;margin-bottom:.5rem}
   .doc-body p:first-child::first-letter{
     font-family:var(--display);font-size:3.3em;line-height:.82;float:left;
     padding:.08em .09em 0 0;color:var(--accent);font-weight:400}
@@ -162,17 +174,35 @@
       </svg>
       <span><b>Get Hired</b> <i>International</i></span>
     </a>
+
     <nav class="nav" aria-label="Primary">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
     </nav>
+
     <a class="btn nav-cta" href="/#contact">Book a free call</a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <nav class="drawer" id="drawer" hidden aria-label="Menu">
+    <a href="/career-journey/">Career Journey</a>
+    <a href="/how-i-help/">How I Help</a>
+    <a href="/how-we-work/">How We Work</a>
+    <a href="/#about">About</a>
+    <a href="/#insights">Insights</a>
+    <a href="/#contact">Contact</a>
+    <a class="btn" href="/#contact">Book a free 20-minute call</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <article class="doc">
     <div class="doc-shell">
       <a class="crumb" href="/#insights">&larr; All insights</a>
@@ -181,11 +211,47 @@
       <p class="stand">A real tax benefit, with real conditions attached, and a change already on the way.</p>
 
       <div class="doc-body">
+
         <p>The 30% ruling is a tax benefit, not a bonus you&rsquo;re handed for being foreign. It lets your employer pay a portion of your salary tax-free instead of the full taxed amount, recognizing the real costs of relocating for work. Over several years, that&rsquo;s genuine money, which is exactly why it&rsquo;s worth understanding before you sign an offer, not after.</p>
-        <p>It isn&rsquo;t automatic. You generally need to be recruited from abroad or transferred within a multinational, bring expertise that&rsquo;s genuinely scarce in the Dutch labor market, meet a minimum salary threshold that&rsquo;s reassessed every year, and have lived more than 150 kilometres from the Dutch border for most of the two years before you started. Being an international hire alone doesn&rsquo;t qualify you.</p>
-        <p>Your employer applies for it, not you, and the application has to go in within four months of your first working day. If that window is missed, the ruling can be lost entirely for that period, so it&rsquo;s worth confirming explicitly during onboarding that it&rsquo;s been filed, rather than assuming HR has it handled.</p>
-        <p>The terms are also shifting. From 2027, the tax-free portion is set to step down from 30% to 27% for new rulings, while people who already had it before the 2024 changes keep their original terms for their full period. If you&rsquo;re negotiating an offer now, when your ruling starts changes what it&rsquo;s actually worth, so it&rsquo;s a fair thing to raise directly in the conversation.</p>
-        <p>This is genuinely not something to guess your way through. The exact thresholds and percentages get revised often, so treat what&rsquo;s written here as the shape of it, and confirm the current figures for your specific situation with <a href="https://business.gov.nl/staff/employing-staff/the-expat-scheme-30-percent-ruling-in-the-netherlands/" target="_blank" rel="noopener noreferrer">the official government guidance</a>, or with <a href="https://www.iamsterdam.com/en/live-work-study/living/official-procedures/30-tax-ruling" target="_blank" rel="noopener noreferrer">I amsterdam&rsquo;s explainer</a>, before you factor it into a decision.</p>
+
+        <h2>What actually qualifies you</h2>
+        <p>It isn&rsquo;t automatic. The conditions are specific, and all of them have to hold:</p>
+        <ul>
+          <li><strong>Recruited from abroad.</strong> You were hired from another country or transferred in within a multinational. Already living here and then finding a job generally does not qualify.</li>
+          <li><strong>The 150 kilometre rule.</strong> In the 24 months before your first working day, you must have lived more than 150 km from the Dutch border for at least 16 of them. This quietly excludes most people moving from Belgium, Luxembourg, and large parts of western Germany.</li>
+          <li><strong>A Dutch withholding agent.</strong> Your employer has to be liable for Dutch payroll tax.</li>
+          <li><strong>Specific expertise, measured as salary.</strong> In practice &ldquo;scarce expertise&rdquo; is tested through a minimum taxable salary, indexed every year. For 2026 that is roughly &euro;48,000, or about &euro;36,500 if you are under 30 with a qualifying master&rsquo;s degree. Scientific researchers and doctors in training are exempt from the threshold.</li>
+        </ul>
+        <p>One detail that catches people out: the threshold applies to your taxable salary <strong>after</strong> the tax-free portion is taken out, not your headline gross. A salary that looks comfortably above the norm can fall below it once 30% is carved off, and the ruling then does not apply.</p>
+
+        <h2>Your employer applies, not you</h2>
+        <p>The application is a joint request from you and your employer to the tax authorities, and your employer drives it. The timing matters: filed within four months of your first working day, it applies retroactively from day one. Filed later, it only starts from the month after submission, and those first months are simply gone.</p>
+        <p>So confirm explicitly during onboarding that it has actually been filed, rather than assuming HR has it handled. &ldquo;Has the 30% application been submitted, and on what date?&rdquo; is a completely normal question.</p>
+
+        <h2>What changes in 2027</h2>
+        <p>The terms are shifting, and the detail here is easy to get wrong. From 1 January 2027 the tax-free portion drops from 30% to <strong>27%</strong>. This is not limited to new arrivals: it applies to rulings that started on or after 1 January 2024 as well, for the remainder of their term. People who held the ruling before the 2024 changes fall under transitional arrangements and keep their original terms.</p>
+        <p>The salary thresholds rise at the same time, to roughly &euro;50,400 generally and &euro;38,400 for the under-30 master&rsquo;s category. The ruling runs for a maximum of five years in all cases.</p>
+        <p>If you&rsquo;re negotiating an offer now, when your ruling starts changes what it&rsquo;s actually worth, so it&rsquo;s a fair thing to raise directly in the conversation.</p>
+
+        <h2>What it is worth, roughly</h2>
+        <p>The mechanism is simpler than the arithmetic. Your employer designates part of your gross salary as a tax-free allowance for relocation costs; only the rest is taxed as income.</p>
+        <div class="eg">
+          <span class="eg-k">Illustration only</span>
+          <p>On a gross salary of &euro;60,000 with the ruling at 30%, &euro;18,000 is paid free of payroll tax and &euro;42,000 is taxed as normal income.</p>
+          <p>Your actual gain is the tax you would have paid on that &euro;18,000, which depends on your bracket and your personal circumstances. At 27% the same salary gives &euro;16,200 untaxed instead.</p>
+          <p>These are illustrative figures to show the shape of it, not a calculation of your position. Thresholds, percentages and brackets all change.</p>
+        </div>
+        <p>Two things worth knowing before you build it into your plans. The benefit is capped for very high earners, so above a certain salary the untaxed portion stops growing. And it is tied to your employment: if you change jobs, continuing the ruling requires a new application within a limited window, and a gap between jobs can end it.</p>
+
+        <h2>Questions worth asking before you sign</h2>
+        <ul>
+          <li>Is the offer quoted <strong>including</strong> or <strong>excluding</strong> the 30% allowance? This single ambiguity accounts for most of the unpleasant surprises.</li>
+          <li>Does the contract guarantee the salary if the ruling is refused, or does your gross drop?</li>
+          <li>Who bears the cost if the application is filed late?</li>
+          <li>What happens to the arrangement if the rules change again mid-term?</li>
+        </ul>
+
+        <p>This is genuinely not something to guess your way through. The exact thresholds and percentages get revised often, so treat what&rsquo;s written here as the shape of it, and confirm the current figures for your specific situation with <a href="https://business.gov.nl/staff/employing-staff/the-expat-scheme-30-percent-ruling-in-the-netherlands/" target="_blank" rel="noopener noreferrer">the official government guidance</a>, or with <a href="https://www.iamsterdam.com/en/live-work-study/living/official-procedures/30-tax-ruling" target="_blank" rel="noopener noreferrer">I amsterdam&rsquo;s explainer</a>, before you factor it into a decision. For anything with real money attached, a Dutch tax adviser is worth the fee.</p>
       </div>
 
       <div class="doc-cta">
@@ -225,7 +291,9 @@
       Get Hired International
     </span>
     <nav class="foot-links" aria-label="Footer">
-      <a href="/#how-i-help">How I Help</a>
+      <a href="/career-journey/">Career Journey</a>
+      <a href="/how-i-help/">How I Help</a>
+      <a href="/how-we-work/">How We Work</a>
       <a href="/#about">About</a>
       <a href="/#insights">Insights</a>
       <a href="/#contact">Contact</a>
@@ -235,5 +303,30 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var burger = document.querySelector('.burger');
+    var drawer = document.getElementById('drawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      var open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', open ? 'false' : 'true');
+      drawer.hidden = open;
+    });
+    drawer.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.hidden = true;
+        burger.focus();
+      }
+    });
+  })();
+</script>
 </body>
 </html>
