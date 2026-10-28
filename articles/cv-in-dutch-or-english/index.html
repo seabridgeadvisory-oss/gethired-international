@@ -62,7 +62,7 @@
   :root {
     --ink:#111A21; --paper:#FBF8F3; --paper-alt:#F3EEE5;
     --accent:#2C6A58; --accent-dp:#1F5245;
-    --muted:#6B7279; --muted-dk:#A8B2AE;
+    --muted:#666D74; --muted-dk:#A8B2AE;
     --rule:#E4DDD1; --rule-dk:#2E3C44;
     --display:"Newsreader","Iowan Old Style",Georgia,serif;
     --body:"Archivo","Helvetica Neue",system-ui,sans-serif;
@@ -107,7 +107,7 @@
   .crumb{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:500;
          color:var(--muted);text-decoration:none;margin-bottom:clamp(1.75rem,4vw,2.5rem)}
   .crumb:hover{color:var(--accent-dp)}
-  .kicker{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  .kicker{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
           color:var(--accent);margin:0 0 1rem}
   .doc h1{font-size:clamp(2rem,1.5rem + 2.2vw,3.1rem);line-height:1.08;letter-spacing:-.022em;margin-bottom:1.1rem}
   .stand{font-size:clamp(1.12rem,1.05rem + .35vw,1.3rem);line-height:1.52;color:var(--muted);
@@ -154,6 +154,9 @@
   .foot-links{display:flex;flex-wrap:wrap;gap:1.25rem}
   .foot-links a{color:var(--muted-dk);text-decoration:none}
   .foot-links a:hover{color:var(--paper)}
+  /* footer links were 22px tall, below a comfortable tap target */
+  .foot-links { gap: 0.4rem 1.25rem; }
+  .foot-links a { padding-block: 0.5rem; }
 
   @media(max-width:560px){.doc-cta .btn{width:100%}}
 
@@ -228,27 +231,26 @@
         <p>If you&rsquo;re genuinely comfortable writing in Dutch, B2 or higher, write it yourself and have someone fluent review it. If you&rsquo;re not there yet, a machine-translated CV is often worse than an honest English one: a native reader catches stiff, word-for-word phrasing in seconds, and it undercuts the very language skills you&rsquo;re trying to show.</p>
         <p>A useful test before you commit: could you handle a fifteen-minute phone screen in Dutch, unprepared? If the honest answer is no, a flawless Dutch CV sets up a conversation you cannot carry, and that gap is more damaging than applying in English would have been.</p>
 
-        <h2>Register: &ldquo;u&rdquo; and &ldquo;je&rdquo;</h2>
-        <p>Everyday Dutch is casual, first names and &ldquo;je&rdquo; within a sentence of meeting someone, but a CV and its cover letter stay in the formal &ldquo;u,&rdquo; consistently. Switching between the two, even by accident, reads as a translation done in a hurry.</p>
+        <h2>Formality is a trap for the unwary</h2>
+        <p>Everyday Dutch is casual. People move to first names and the informal form of &ldquo;you&rdquo; within a sentence of meeting you, and newcomers reasonably conclude the written language works the same way. It does not. A CV and its cover letter stay in the formal register from the opening line to the sign-off.</p>
         <div class="eg">
-          <span class="eg-k">Example</span>
-          <p><strong>Mixed, and it shows:</strong> &ldquo;Graag stel ik mij aan <em>u</em> voor &hellip; Ik hoor graag van <em>je</em>.&rdquo;</p>
-          <p><strong>Consistent:</strong> &ldquo;Graag stel ik mij aan <em>u</em> voor &hellip; Ik hoor graag van <em>u</em>.&rdquo;</p>
-          <p>Pick one register at the top of the letter and hold it to the last line, including the sign-off.</p>
+          <span class="eg-k">What goes wrong</span>
+          <p>The usual failure is not choosing the wrong level of formality. It is starting formal and drifting informal by the closing line, which happens easily when you are translating in your head as you write.</p>
+          <p>A native reader notices immediately, and what it signals is not rudeness but that someone else probably drafted the letter. If you have a Dutch speaker reviewing it, give them one specific instruction: check that the formality is consistent all the way to the final sentence.</p>
         </div>
 
         <h2>Phrases that don&rsquo;t survive the trip</h2>
-        <p>&ldquo;Responsible for&rdquo; and &ldquo;results-driven&rdquo; already sound a little inflated in English; translated literally into Dutch, a language that leans understated in business writing, they land even further off.</p>
+        <p>&ldquo;Responsible for&rdquo; and &ldquo;results-driven&rdquo; already sound a little inflated in English. Dutch business writing leans further towards understatement, so translated literally these land further off still.</p>
         <ul>
-          <li>&ldquo;Results-driven professional&rdquo; &rarr; translated word for word this reads as filler. Drop it and state the result instead.</li>
-          <li>&ldquo;Responsible for a team of 10&rdquo; &rarr; <em>&ldquo;Gaf leiding aan een team van 10&rdquo;</em> &mdash; a verb, not a status.</li>
-          <li>&ldquo;Spearheaded&rdquo;, &ldquo;championed&rdquo;, &ldquo;owned the vision for&rdquo; &rarr; there is no natural Dutch equivalent that does not sound slightly absurd. Say what you started, led, or built.</li>
-          <li>&ldquo;Dear Sir/Madam&rdquo; &rarr; <em>&ldquo;Geachte heer/mevrouw&rdquo;</em> is correct, but a name is better. Dutch hiring teams are small and usually findable.</li>
+          <li><strong>&ldquo;Results-driven professional&rdquo;</strong> &mdash; word for word this becomes filler a Dutch reader skims past. Drop the label and state the result.</li>
+          <li><strong>&ldquo;Responsible for a team of 10&rdquo;</strong> &mdash; the natural Dutch construction uses a verb rather than a statement of status. Write what you did with the team, not that you were in charge of it.</li>
+          <li><strong>&ldquo;Spearheaded&rdquo;, &ldquo;championed&rdquo;, &ldquo;owned the vision for&rdquo;</strong> &mdash; there is no equivalent that does not sound faintly absurd. Say what you started, led or built.</li>
+          <li><strong>&ldquo;Dear Sir/Madam&rdquo;</strong> &mdash; the standard Dutch salutation is correct but impersonal, and a name is always better. Hiring teams here are small and usually findable on the company site or LinkedIn.</li>
         </ul>
         <p>Say what you changed, in plain terms. The same advice that applies in English applies here too, only the tolerance for inflation is lower.</p>
 
         <h2>The middle path</h2>
-        <p>If you are somewhere between the two, you do not have to choose all or nothing. An English CV with a short, carefully checked Dutch cover note shows the effort and the direction of travel without pretending to fluency you do not have. Adding a single honest line &mdash; <em>Nederlands: B1, actief aan het leren</em> &mdash; does more for you than a full Dutch CV that someone else wrote.</p>
+        <p>If you are somewhere between the two, you do not have to choose all or nothing. An English CV with a short, carefully checked Dutch cover note shows the effort and the direction of travel without pretending to fluency you do not have. A single honest line on your CV stating your current level and that you are actively learning does more for you than a full Dutch CV someone else wrote.</p>
 
         <p>For the mechanics and formatting conventions, <a href="https://www.expatica.com/nl/working/finding-a-job/dutch-cv-interview-tips-102340/" target="_blank" rel="noopener noreferrer">Expatica&rsquo;s guide to Dutch CVs</a> is a solid reference, and <a href="https://www.makeitinthenorth.nl/all-content-for-jobseekers/how-to-find-a-job-in-the-netherlands/how-to-write-a-cv-full-guide/" target="_blank" rel="noopener noreferrer">Make It in the North&rsquo;s CV guide</a> covers conventions specific to the Dutch market. Neither replaces a native speaker&rsquo;s eye on your own draft, but both are a solid start.</p>
       </div>
