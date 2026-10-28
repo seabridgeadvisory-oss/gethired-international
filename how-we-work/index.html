@@ -59,7 +59,7 @@
     --accent:     #2C6A58;
     --accent-dp:  #1F5245;
     --accent-soft:#E7EFEA;
-    --muted:      #6B7279;
+    --muted:      #666D74;
     --muted-dk:   #A8B2AE;
     --rule:       #E4DDD1;
     --rule-dk:    #2E3C44;
@@ -133,9 +133,9 @@
 
   .eyebrow {
     font-family: var(--body);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--accent);
     margin: 0;
@@ -163,6 +163,34 @@
     margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
     max-width: 46ch;
   }
+
+  /* ---------- wide screens: let section heads use the whole frame ----------
+     The head was capped at 46ch, so on a 1180px shell the heading and its
+     lede sat in the left third with the right two-thirds empty. Above 900px
+     the head becomes two columns: label and headline left, lede right,
+     with the lede's last line sitting on the headline's baseline. */
+  @media (min-width: 900px) {
+    .section-head {
+      max-width: none;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      column-gap: clamp(2.2rem, 5vw, 4.5rem);
+      row-gap: 1.1rem;
+      align-items: start;
+    }
+    .section-head > * { grid-column: 1; }
+    .section-head > .lede {
+      grid-column: 2;
+      grid-row: 2;          /* beside the headline: eyebrow, then h2 */
+      align-self: end;
+      max-width: 44ch;
+      margin-bottom: 0.2rem;
+    }
+    /* inner pages carry a breadcrumb first, which pushes the headline down a row */
+    .section-head:has(.crumb) > .lede { grid-row: 3; }
+  }
+  /* seven services in three columns: the odd one out was left with a stray
+     vertical divider beside it and a third-width rule underneath */
+  .services .service:last-child { border-right: none; border-bottom: none; }
 
   /* ---------- buttons ---------- */
 
@@ -455,7 +483,7 @@
   }
   .stage-detail > div { display: grid; gap: 0.3rem; }
   .stage-detail dt {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -567,7 +595,7 @@
     font-size: 0.95rem;
   }
   .cv-item dt {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -605,7 +633,7 @@
     color: var(--accent);
     font-variant-numeric: tabular-nums;
   }
-  .pstep h3 { font-size: 1.02rem; font-weight: 500; line-height: 1.28; }
+  .pstep h2, .pstep h3 { font-size: 1.02rem; font-weight: 500; line-height: 1.28; }
   .pstep p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
 
   /* ---------- the process, given a full page to breathe ---------- */
@@ -621,7 +649,7 @@
     }
     .pstep:first-child { border-top: 2px solid var(--rule); }
     .pstep::before { font-size: 1.45rem; padding-top: .1rem; }
-    .pstep h3 { font-size: 1.22rem; grid-column: 2; align-self: start; }
+    .pstep h2, .pstep h3 { font-size: 1.22rem; grid-column: 2; align-self: start; }
     .pstep p { font-size: 0.96rem; grid-column: 3; grid-row: 1; line-height: 1.68; }
     .pstep p + p { grid-row: 2; margin-top: -.3rem; }
   }
@@ -754,6 +782,9 @@
   .foot-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
   .foot-links a { color: var(--muted-dk); text-decoration: none; }
   .foot-links a:hover { color: var(--paper); }
+  /* footer links were 22px tall, below a comfortable tap target */
+  .foot-links { gap: 0.4rem 1.25rem; }
+  .foot-links a { padding-block: 0.5rem; }
 
   /* ---------- reveal ---------- */
 
@@ -840,7 +871,7 @@
       <div class="section-head rv">
         <p class="crumb"><a href="/">Home</a> &rsaquo; How we work together</p>
         <p class="eyebrow">How we work together</p>
-        <h2 class="h2">A plan built around your search, not a packaged programme</h2>
+        <h1 class="h2">A plan built around your search, not a packaged programme</h1>
         <p class="lede">Five stages, shaped by where you actually are. Some people need all of it; most need two or three.</p>
       </div>
 
@@ -850,27 +881,27 @@
 
       <div class="process rv">
         <div class="pstep">
-          <h3>Understand your situation</h3>
+          <h2>Understand your situation</h2>
           <p>Where you are, what you've tried, and what you actually want next.</p>
           <p>We go through the applications you have already sent, the roles you have been aiming at, and whatever feedback you did or did not get back. Most of the useful signal is already sitting in what you have done so far. It just has not been read back to you by anyone.</p>
         </div>
         <div class="pstep">
-          <h3>Identify the obstacles</h3>
+          <h2>Identify the obstacles</h2>
           <p>Mapping the areas to improve, and being honest about which ones matter most.</p>
           <p>Sometimes it is the CV. Sometimes it is the channel, or the level of role you are targeting, or the way the story comes out in the room. Naming the real one matters, because working hard on the wrong obstacle is how months disappear.</p>
         </div>
         <div class="pstep">
-          <h3>Build a tailored strategy</h3>
+          <h2>Build a tailored strategy</h2>
           <p>A plan that fits your field, your timeline and your circumstances here.</p>
           <p>Which roles to go after and which to let go of, where to find them, and in what order to do things. A plan you can actually run alongside a job, a family, or a visa clock.</p>
         </div>
         <div class="pstep">
-          <h3>Work through applications and interviews</h3>
+          <h2>Work through applications and interviews</h2>
           <p>Side by side on the real applications and the real interviews, as they come.</p>
           <p>Real vacancies, real applications, real preparation for the rounds you are invited to. We rewrite, rehearse and debrief as things happen, rather than in the abstract.</p>
         </div>
         <div class="pstep">
-          <h3>Support through the offer</h3>
+          <h2>Support through the offer</h2>
           <p>All the way to the final conversation, including what the offer is really worth.</p>
           <p>Reading the offer properly: base salary, holiday allowance, pension, the 30% ruling if it applies to you, and which parts are actually negotiable. Then the conversation itself, which is usually the part people dread most.</p>
         </div>
