@@ -59,7 +59,7 @@
     --accent:     #2C6A58;
     --accent-dp:  #1F5245;
     --accent-soft:#E7EFEA;
-    --muted:      #6B7279;
+    --muted:      #666D74;
     --muted-dk:   #A8B2AE;
     --rule:       #E4DDD1;
     --rule-dk:    #2E3C44;
@@ -133,9 +133,9 @@
 
   .eyebrow {
     font-family: var(--body);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--accent);
     margin: 0;
@@ -163,6 +163,34 @@
     margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
     max-width: 46ch;
   }
+
+  /* ---------- wide screens: let section heads use the whole frame ----------
+     The head was capped at 46ch, so on a 1180px shell the heading and its
+     lede sat in the left third with the right two-thirds empty. Above 900px
+     the head becomes two columns: label and headline left, lede right,
+     with the lede's last line sitting on the headline's baseline. */
+  @media (min-width: 900px) {
+    .section-head {
+      max-width: none;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      column-gap: clamp(2.2rem, 5vw, 4.5rem);
+      row-gap: 1.1rem;
+      align-items: start;
+    }
+    .section-head > * { grid-column: 1; }
+    .section-head > .lede {
+      grid-column: 2;
+      grid-row: 2;          /* beside the headline: eyebrow, then h2 */
+      align-self: end;
+      max-width: 44ch;
+      margin-bottom: 0.2rem;
+    }
+    /* inner pages carry a breadcrumb first, which pushes the headline down a row */
+    .section-head:has(.crumb) > .lede { grid-row: 3; }
+  }
+  /* seven services in three columns: the odd one out was left with a stray
+     vertical divider beside it and a third-width rule underneath */
+  .services .service:last-child { border-right: none; border-bottom: none; }
 
   /* ---------- buttons ---------- */
 
@@ -441,7 +469,7 @@
   }
 
   .stage-lead { display: grid; gap: 0.7rem; }
-  .stage-lead h3 {
+  .stage-lead h2, .stage-lead h3 {
     font-size: var(--step-h3);
     line-height: 1.22;
     font-weight: 500;
@@ -455,7 +483,7 @@
   }
   .stage-detail > div { display: grid; gap: 0.3rem; }
   .stage-detail dt {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -567,7 +595,7 @@
     font-size: 0.95rem;
   }
   .cv-item dt {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -736,6 +764,9 @@
   .foot-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
   .foot-links a { color: var(--muted-dk); text-decoration: none; }
   .foot-links a:hover { color: var(--paper); }
+  /* footer links were 22px tall, below a comfortable tap target */
+  .foot-links { gap: 0.4rem 1.25rem; }
+  .foot-links a { padding-block: 0.5rem; }
 
   /* ---------- reveal ---------- */
 
@@ -821,7 +852,7 @@
       <div class="section-head rv">
         <p class="crumb"><a href="/">Home</a> &rsaquo; The career journey</p>
         <p class="eyebrow">The career journey</p>
-        <h2 class="h2">The four points where internationals typically get stuck</h2>
+        <h1 class="h2">The four points where internationals typically get stuck</h1>
         <p class="lede">Each stage asks something different of you. We work through them in order, or start wherever you are right now.</p>
       </div>
 
@@ -830,7 +861,7 @@
         <article class="stage rv">
           <div class="stage-num">01</div>
           <div class="stage-lead">
-            <h3>Where to start?</h3>
+            <h2>Where to start?</h2>
             <p>The first question is: how do I search for jobs, and how do I build a compelling application?</p>
           <figure class="fig">
               <img src="/images/journey-online-session.jpg" alt="A job seeker taking notes during an online session, a video call open on the laptop" width="849" height="566" loading="lazy" decoding="async">
@@ -856,7 +887,7 @@
         <article class="stage rv">
           <div class="stage-num">02</div>
           <div class="stage-lead">
-            <h3>Getting your application seen among hundreds</h3>
+            <h2>Getting your application seen among hundreds</h2>
             <p>You send hundreds of applications and hear nothing back. This is much more common than you'd think.</p>
           <figure class="fig">
               <img src="/images/journey-application-work.jpg" alt="Working on an application at a laptop with a notebook open alongside" width="849" height="566" loading="lazy" decoding="async">
@@ -882,7 +913,7 @@
         <article class="stage rv">
           <div class="stage-num">03</div>
           <div class="stage-lead">
-            <h3>My first interview! How do I get ready?</h3>
+            <h2>My first interview! How do I get ready?</h2>
             <p>Receiving an email titled "Invitation for the 1st interview" is thrilling. This is just the start of a journey that can take up to seven steps.</p>
           <figure class="fig">
               <img src="/images/journey-interview.jpg" alt="Two people sitting across a table in a daylit meeting room, mid-conversation" width="999" height="666" loading="lazy" decoding="async">
@@ -908,7 +939,7 @@
         <article class="stage rv">
           <div class="stage-num">04</div>
           <div class="stage-lead">
-            <h3>I got an offer! Now what?</h3>
+            <h2>I got an offer! Now what?</h2>
             <p>How great it feels, after months of job searching, endless processes, and setbacks, to finally get a job offer.</p>
           <figure class="fig">
               <img src="/images/journey-conversation.jpg" alt="Two colleagues talking beside an office coffee machine" width="999" height="666" loading="lazy" decoding="async">
