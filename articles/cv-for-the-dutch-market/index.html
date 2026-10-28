@@ -62,7 +62,7 @@
   :root {
     --ink:#111A21; --paper:#FBF8F3; --paper-alt:#F3EEE5;
     --accent:#2C6A58; --accent-dp:#1F5245;
-    --muted:#6B7279; --muted-dk:#A8B2AE;
+    --muted:#666D74; --muted-dk:#A8B2AE;
     --rule:#E4DDD1; --rule-dk:#2E3C44;
     --display:"Newsreader","Iowan Old Style",Georgia,serif;
     --body:"Archivo","Helvetica Neue",system-ui,sans-serif;
@@ -107,7 +107,7 @@
   .crumb{display:inline-flex;align-items:center;gap:.45rem;font-size:.82rem;font-weight:500;
          color:var(--muted);text-decoration:none;margin-bottom:clamp(1.75rem,4vw,2.5rem)}
   .crumb:hover{color:var(--accent-dp)}
-  .kicker{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  .kicker{font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
           color:var(--accent);margin:0 0 1rem}
   .doc h1{font-size:clamp(2rem,1.5rem + 2.2vw,3.1rem);line-height:1.08;letter-spacing:-.022em;margin-bottom:1.1rem}
   .stand{font-size:clamp(1.12rem,1.05rem + .35vw,1.3rem);line-height:1.52;color:var(--muted);
@@ -154,6 +154,9 @@
   .foot-links{display:flex;flex-wrap:wrap;gap:1.25rem}
   .foot-links a{color:var(--muted-dk);text-decoration:none}
   .foot-links a:hover{color:var(--paper)}
+  /* footer links were 22px tall, below a comfortable tap target */
+  .foot-links { gap: 0.4rem 1.25rem; }
+  .foot-links a { padding-block: 0.5rem; }
 
   @media(max-width:560px){.doc-cta .btn{width:100%}}
 
