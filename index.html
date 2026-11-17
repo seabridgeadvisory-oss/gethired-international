@@ -589,9 +589,15 @@
     align-items: start;
   }
   @media (min-width: 900px) {
-    .founder-grid { grid-template-columns: 0.78fr 1.22fr; }
+    .founder-grid { grid-template-columns: 0.92fr 1.08fr; }
   }
 
+  /* The headline sits in the left column above the portrait, so the bio starts
+     at the very top of the right column and no empty corner is left above it. */
+  .founder-aside .eyebrow { margin-bottom: 1rem; }
+  .founder-aside .h2 { margin: 0; }
+  .founder-photo { margin-top: clamp(1.75rem, 3.5vw, 2.75rem); }
+  .founder-body > .cv-list { margin-top: clamp(1.75rem, 3.5vw, 2.5rem); }
   .founder-photo img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -950,21 +956,20 @@
   <!-- ============ 5. FOUNDER ============ -->
   <section class="band band--ink" id="about">
     <div class="shell">
-      <div class="section-head rv">
-        <p class="eyebrow">Who you&rsquo;d work with</p>
-        <h2 class="h2" style="color:var(--paper)">I&rsquo;ve been through this process many times, on both sides of the table.</h2>
-      </div>
-
       <div class="founder-grid">
-        <div class="founder-photo rv">
+        <div class="founder-aside rv">
+          <p class="eyebrow">Who you&rsquo;d work with</p>
+          <h2 class="h2" style="color:var(--paper)">I&rsquo;ve been through this process many times, on both sides of the table.</h2>
+          <div class="founder-photo">
           <img src="/images/portrait-of-caio-garrido.jpg" alt="Caio Garrido, career coach for internationals in the Netherlands" width="1000" height="666" loading="lazy" decoding="async">
           <a class="linkedin" href="https://www.linkedin.com/in/caio-garrido/" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
             linkedin.com/in/caio-garrido
           </a>
+          </div>
         </div>
 
-        <div>
+        <div class="founder-body">
           <div class="prose rv">
             <p>Life has led me down unexpected paths, and I&rsquo;m grateful for all the experiences built up over <strong>12 years in large organizations</strong>. As a skilled migrant in the Netherlands with an MBA, I built my career across FedEx Express, ING Bank, and Ecolab in multiple leading roles, and I have been on <strong>both sides of the Dutch hiring process</strong>: hired into this market myself, and hiring into it from the corporate side.</p>
             <p>Now, I want to share this knowledge and help you accomplish your professional ambitions. It&rsquo;s not an easy task, but working together, we&rsquo;ll break through this wall and celebrate.</p>
